@@ -1,7 +1,7 @@
-import jsonPlaceholder from '../apis/jsonPlaceholger';
+import jsonPlaceholder from '../apis/jsonPlaceholder';
 
 export const fetchPosts = () => async dispatch => {
-    const res = await jsonPlaceholder.get('/posts')
+    const res = await jsonPlaceholder.get('/posts');
 
-    dispatch({type: 'FETCH_POSTS', payload: res})
+    dispatch({type: 'FETCH_POSTS', payload: res.data})
 }
